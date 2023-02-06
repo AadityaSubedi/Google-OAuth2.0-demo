@@ -115,21 +115,5 @@ async def listpdfs():
             e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
 
 
-# @router.get("/profile")
-# async def google_profile():
-#     try:
-#         google_api_operation = comp.GoogleService()
-#         data = google_api_operation.get_google_user_info(
-#             db["login"]["access_token"])
-
-#         data = jsonable_encoder(data)
-
-#         return JSONResponse(content={"message": "user data retrieve success", "data": data}, status_code=status.HTTP_200_OK)
-
-#     except Exception as e:
-#         raise HTTPException(detail=str(
-#             e), status_code=status.HTTP_500_INTERNAL_SERVER_ERROR)
-
-
 # include the router
 app.include_router(router)
